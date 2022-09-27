@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "c69b344d-9f9f-4c1f-98af-f3f4a2a4bd42",
+		"name": "Postman_plan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23478301"
+	},
+	"item": [
+		{
+			"name": "actor",
+			"item": [
+				{
+					"name": "traer todos los actores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/actor",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"actor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traer un actor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/actor/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"actor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear un nuevo actor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"first_name\" : \"leonardo\",\r\n        \"last_name\" : \"dicaprio\"\r\n            } "
+						},
+						"url": {
+							"raw": "localhost:8000/api/actor",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"actor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar un actor",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/bootcamps/100",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"bootcamps",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar un actor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Pearl for Begginers\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8000/api/bootcamps/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"bootcamps",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear nuevo actor con errores de validacion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\" : \"\",\r\n        \"website\" : \"http:/rubi.com\",\r\n        \"phone\" : \"(222) - 151489\",\r\n        \"description\" : \"Bootcamp for Rubi Learning \",\r\n        \"user_id\" : 1,\r\n        \"average_rating\" : 7.0 ,\r\n        \"average_cost\" : 3000 \r\n    } "
+						},
+						"url": {
+							"raw": "localhost:8000/api/bootcamps",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"bootcamps"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "crear una categoria",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bootcamp_id\" : 1,\r\n    \"title\" : \"Python data structures\",\r\n    \"description\" : \"you'll see dictionary and arrays\",\r\n    \"weeks\" : 4,\r\n    \"enroll_cost\" : 5000,\r\n    \"minimum_skill\" : \"Beginner\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8000/api/courses/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traer todas las categorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/category",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traer una categoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/courses/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar una categoria",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Java data structures\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8000/api/courses/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courses",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar una categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/courses/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
